@@ -1,4 +1,3 @@
-<p>home works!</p>
 <section>
   <form>
     <input
@@ -12,5 +11,7 @@
   </form>
 </section>
 <section class="results">
-  <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+  @for (housingLocation of housingLocations; track housingLocation) {
+    <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+  }
 </section>
